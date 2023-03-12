@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="262.0" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Se connecter" textFill="#c4314ffc">
+      <Label text="S'inscrire" textFill="#c4314ffc">
          <VBox.margin>
             <Insets left="20.0" />
          </VBox.margin>
@@ -36,20 +35,32 @@
             </TextField>
          </children>
       </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="199.0">
+         <children>
+            <TextField floatText="Confirmer le mot de passe" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="227.0" prefHeight="31.0" prefWidth="199.0">
          <children>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" opacity="0.74" styleClass="transperant-button" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" text="Mot de passe oublié?" textAlignment="CENTER" textFill="#00000087">
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" opacity="0.74" styleClass="transperant-button" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" text="J'ai un compte?" textAlignment="CENTER" textFill="#00000087">
                <font>
-                  <Font name="System Italic" size="7.0" />
+                  <Font name="System Italic" size="10.0" />
                </font>
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-radius: 10;" styleClass="pink-buttom" text="Connexion">
+            <Button mnemonicParsing="false" style="-fx-background-radius: 10;" styleClass="pink-buttom" text="S'inscrire" textFill="WHITE">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
             </Button>
          </children>
          <VBox.margin>
