@@ -25,3 +25,13 @@
 
 }
 
+.pink-buttom{
+-fx-background-color: #C4314F;
+-fx-border-radius:10px;
+
+
+}
+.transperant-button{
+-fx-background-color: transperant;
+-fx-text-fill: #000000;
+}
