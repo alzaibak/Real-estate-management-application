@@ -12,7 +12,7 @@
    <children>
       <Pane layoutX="20.0" layoutY="20.0" prefHeight="449.0" prefWidth="564.0" styleClass="pane" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
-            <VBox layoutX="19.0" layoutY="17.0" prefHeight="415.0" prefWidth="262.0" styleClass="inscription-window" />
+            <VBox layoutX="14.0" layoutY="17.0" prefHeight="415.0" prefWidth="262.0" styleClass="inscription-window" />
             <Label layoutX="380.0" layoutY="157.0" prefHeight="27.0" prefWidth="140.0" text=" êtes vous inscrit" textFill="#ffffffd9">
                <font>
                   <Font size="18.0" />
