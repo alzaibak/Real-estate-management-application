@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="418.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="39.0" layoutY="32.0" text="Recherche">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="132.0" layoutY="33.0" text="Identifiant">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </TextField>
+      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="295.0" layoutY="37.0" />
+      <TextField layoutX="39.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="Nom">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="295.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="prénom">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TableView layoutX="26.0" layoutY="173.0" prefHeight="197.0" prefWidth="635.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Nom" />
+          <TableColumn prefWidth="116.0000228881836" text="Prénom" />
+            <TableColumn prefWidth="144.00001525878906" text="Numéro de téléphone" />
+            <TableColumn prefWidth="151.99996948242188" text="Date de naissance" />
+            <TableColumn prefWidth="146.66668701171875" text="Payement à jour" />
+        </columns>
+      </TableView>
+      <Button layoutX="181.0" layoutY="376.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Ajouter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="295.0" layoutY="376.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Modifier">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="406.0" layoutY="376.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Supprimer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField layoutX="39.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="date de naissance">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="295.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="Numéro de téléphone">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
