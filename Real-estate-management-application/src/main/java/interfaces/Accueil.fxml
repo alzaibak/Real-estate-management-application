@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane minHeight="418.0" prefWidth="687.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+   <children>
+      <Pane layoutX="28.0" layoutY="14.0" prefHeight="56.0" prefWidth="621.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="41.0" layoutY="20.0" text="Logement" textFill="#433c3c">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Icon content="ERROR" layoutX="25.0" layoutY="22.0" />
+            <Label layoutX="123.0" layoutY="20.0" text="Label" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="301.0" fitWidth="295.0" layoutX="28.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField layoutX="408.0" layoutY="144.0" prefHeight="25.0" prefWidth="224.0" />
+      <Label layoutX="408.0" layoutY="110.0" text="Loyer" textFill="#4fa1ba">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="408.0" layoutY="229.0" prefHeight="25.0" prefWidth="224.0" />
+      <Label layoutX="408.0" layoutY="195.0" prefHeight="22.0" prefWidth="102.0" text="Superficie" textFill="#4fa6c0">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="410.0" layoutY="309.0" prefHeight="25.0" prefWidth="224.0" />
+      <Label layoutX="410.0" layoutY="275.0" prefHeight="22.0" prefWidth="76.0" text="Adresse" textFill="#47a2be">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Icon content="BRIGHTNESS_LOW" layoutX="537.0" layoutY="359.0" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: lightblue;" />
+      <Icon content="CREATE" layoutX="437.0" layoutY="359.0" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: lightblue;" />
+      <Text layoutX="500.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textOrigin="CENTER" wrappingWidth="27.990234375">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
