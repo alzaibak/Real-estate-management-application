@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="418.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="39.0" layoutY="32.0" text="Recherche">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="132.0" layoutY="33.0" text="Identifiant">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </TextField>
+      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="295.0" layoutY="37.0" />
+      <TextField layoutX="39.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="Adreese">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="295.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="Mois de loyer">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="180.0" layoutY="348.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Ajouter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="297.0" layoutY="348.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Modifier">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="408.0" layoutY="348.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Supprimer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField layoutX="39.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="loyer par CAF">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="295.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="Loyer par locataire">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TableView layoutX="19.0" layoutY="201.0" prefHeight="133.0" prefWidth="635.0">
+         <columns>
+            <TableColumn prefWidth="168.66665077209473" text="Logement Id" />
+            <TableColumn prefWidth="136.0000457763672" text="adresse" />
+            <TableColumn prefWidth="120.6666259765625" text="loyer par CAF" />
+            <TableColumn prefWidth="127.33328247070312" text="Loyer par locataire" />
+            <TableColumn prefWidth="85.3333740234375" text="loyer Totale" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
