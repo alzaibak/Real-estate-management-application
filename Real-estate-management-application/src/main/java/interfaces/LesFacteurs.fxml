@@ -16,45 +16,61 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="202.0" layoutY="33.0" text="logement">
+      <TextField layoutX="39.0" layoutY="75.0" prefHeight="24.0" prefWidth="199.0" text="logement">
          <font>
             <Font name="Cambria" size="12.0" />
          </font>
       </TextField>
-      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="359.0" layoutY="36.0" />
-      <TextField layoutX="39.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="Mail d'utilisateur">
+      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="232.0" layoutY="36.0" />
+      <TextField layoutX="39.0" layoutY="118.0" prefHeight="27.0" prefWidth="199.0" text="Mail de locataire">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="295.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </TextField>
-      <TableView layoutX="26.0" layoutY="173.0" prefHeight="199.0" prefWidth="635.0">
+      <TableView layoutX="26.0" layoutY="310.0" prefHeight="83.0" prefWidth="635.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Nom" />
-          <TableColumn prefWidth="116.0000228881836" text="Prénom" />
-            <TableColumn prefWidth="144.00001525878906" text="Numéro de téléphone" />
-            <TableColumn prefWidth="151.99996948242188" text="Date de naissance" />
-            <TableColumn prefWidth="146.66668701171875" text="Payement à jour" />
+          <TableColumn prefWidth="168.66665077209473" text="Logement Id" />
+          <TableColumn prefWidth="136.0000457763672" text="adresse" />
+            <TableColumn prefWidth="120.6666259765625" text="loyer par CAF" />
+            <TableColumn prefWidth="127.33328247070312" text="Loyer par locataire" />
+            <TableColumn prefWidth="85.3333740234375" text="loyer Totale" />
         </columns>
       </TableView>
-      <TextField layoutX="39.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="Date de début">
+      <TextField layoutX="39.0" layoutY="166.0" prefHeight="27.0" prefWidth="199.0" text="Date de début">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="295.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="Date de fin">
+      <TextField layoutX="39.0" layoutY="218.0" prefHeight="27.0" prefWidth="199.0" text="Date de fin">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <Button layoutX="528.0" layoutY="123.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Envoyer">
+      <Button layoutX="78.0" layoutY="265.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: lightblue;" text="Envoyer">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Label layoutX="386.0" layoutY="32.0" prefHeight="26.0" prefWidth="157.0" text="Bilan des comptes ">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="386.0" layoutY="74.0" prefHeight="24.0" prefWidth="199.0" text="logement">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="386.0" layoutY="117.0" prefHeight="27.0" prefWidth="199.0" text="Mail de locataire">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="418.0" layoutY="192.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: lightblue;" text="Envoyer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="561.0" layoutY="36.0" />
    </children>
 </AnchorPane>
