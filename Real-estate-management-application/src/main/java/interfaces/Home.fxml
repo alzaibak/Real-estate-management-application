@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="749.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+<AnchorPane prefHeight="500.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="184.0" style="-fx-background-color: #0f9ed0;">
          <children>
@@ -63,12 +62,20 @@
                   <Icon content="EMAIL" />
                </graphic>
             </Button>
-            <Button layoutX="3.0" layoutY="346.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: transperant;" text="Déconnexion" AnchorPane.leftAnchor="3.0">
+            <Button layoutX="3.0" layoutY="373.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: transperant;" text="Déconnexion" AnchorPane.leftAnchor="3.0">
                <font>
                   <Font size="17.0" />
                </font>
                <graphic>
                   <Icon content="LOCK" />
+               </graphic>
+            </Button>
+            <Button layoutX="-4.0" layoutY="339.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: transperant;" text="Les Loyers">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <Icon content="NATURE_PEOPLE" />
                </graphic>
             </Button>
          </children>
