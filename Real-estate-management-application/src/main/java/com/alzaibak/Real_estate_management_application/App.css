@@ -19,7 +19,7 @@
 }
 
 .inscription-window{
--fx-background-image: url(images/bck.jpg);
+-fx-background-image: url("bck.jpg");
 -fx-background-position: centre centre;
 -fx-background-size: 300 300;
 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="418.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="39.0" layoutY="32.0" text="Recherche">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="132.0" layoutY="33.0" text="Identifiant">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </TextField>
+      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="295.0" layoutY="37.0" />
+      <TextField layoutX="39.0" layoutY="65.0" prefHeight="27.0" prefWidth="357.0" text="Adresse">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="406.0" layoutY="65.0" prefHeight="27.0" prefWidth="158.0" text="Superficie">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <ComboBox layoutX="39.0" layoutY="113.0" prefHeight="25.0" prefWidth="175.0" promptText="Région" />
+      <ComboBox layoutX="231.0" layoutY="160.0" prefHeight="25.0" prefWidth="158.0" promptText="Loyer" />
+      <ComboBox layoutX="39.0" layoutY="160.0" prefHeight="25.0" prefWidth="175.0" promptText="Type" />
+      <ComboBox layoutX="388.0" layoutY="113.0" prefHeight="25.0" prefWidth="175.0" promptText="Région" />
+      <ComboBox layoutX="236.0" layoutY="113.0" prefHeight="25.0" prefWidth="141.0" promptText="Province" />
+      <Label layoutX="425.0" layoutY="164.0" prefHeight="17.0" prefWidth="120.0" text="Aucune séléctioné" textFill="#4b3feb">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView layoutX="26.0" layoutY="204.0" prefHeight="169.0" prefWidth="635.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Id" />
+          <TableColumn prefWidth="171.33329010009766" text="Adresse " />
+            <TableColumn prefWidth="53.3333740234375" text="Ville " />
+            <TableColumn prefWidth="71.99993896484375" text="Code postal" />
+            <TableColumn prefWidth="99.3333740234375" text="prix des charges" />
+            <TableColumn prefWidth="55.333343505859375" text="Loyer" />
+            <TableColumn prefWidth="105.33333333333337" text="dépôt de garantie" />
+        </columns>
+      </TableView>
+      <Button layoutX="181.0" layoutY="382.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Ajouter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="295.0" layoutY="382.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Modifier">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="406.0" layoutY="382.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Supprimer" />
+   </children>
+</AnchorPane>
