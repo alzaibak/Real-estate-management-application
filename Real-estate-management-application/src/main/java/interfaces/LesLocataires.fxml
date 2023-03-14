@@ -35,10 +35,11 @@
       <TableView layoutX="26.0" layoutY="173.0" prefHeight="197.0" prefWidth="635.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Nom" />
-          <TableColumn prefWidth="116.0000228881836" text="Prénom" />
-            <TableColumn prefWidth="144.00001525878906" text="Numéro de téléphone" />
-            <TableColumn prefWidth="151.99996948242188" text="Date de naissance" />
-            <TableColumn prefWidth="146.66668701171875" text="Payement à jour" />
+          <TableColumn prefWidth="94.6666488647461" text="Prénom" />
+            <TableColumn prefWidth="128.66664123535156" text="Numéro de téléphone" />
+            <TableColumn prefWidth="119.99993896484375" text="Date de naissance" />
+            <TableColumn prefWidth="102.66659545898438" text="Payement à jour" />
+            <TableColumn prefWidth="112.66670735677087" text="Solde du locataire" />
         </columns>
       </TableView>
       <Button layoutX="181.0" layoutY="376.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Ajouter">
