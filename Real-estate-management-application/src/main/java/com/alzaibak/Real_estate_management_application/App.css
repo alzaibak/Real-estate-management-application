@@ -1,17 +1,15 @@
 
 .parent{
 	-fx-background-color:whitesmoke;
-	background-color:whitesmoke;
 }
 .pane{
 	-fx-background-color: #0066FF;
-	background-color:#0066FF;
 	
 	
 }
 .signIn-button{
 	-fx-border-radius:5px;
-	-fx-background-color:transperat;
+	-fx-background-color: transparent;
 	-fx-text-fill:white;
 	-fx-border-color:#cccccc;
 	-fx-border-width:2px;
@@ -19,8 +17,7 @@
 }
 
 .inscription-window{
--fx-background-image: url("bck.jpg");
--fx-background-position: centre centre;
+-fx-background-image: url("/images/bck.jpg");
 -fx-background-size: 300 300;
 
 }
