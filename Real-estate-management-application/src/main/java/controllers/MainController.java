@@ -17,7 +17,6 @@ import javafx.util.Duration;
 
 
 public class MainController implements Initializable {
-
     @FXML
     private Button connectionButton;
 
