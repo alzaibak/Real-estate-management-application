@@ -18,8 +18,7 @@
 
 .inscription-window{
 -fx-background-image: url("/images/bck.jpg");
--fx-background-size: 300 300;
-
+-fx-background-size: cover;
 }
 
 .pink-buttom{
@@ -29,6 +28,6 @@
 
 }
 .transperant-button{
--fx-background-color: transperant;
+-fx-background-color: transparent;
 -fx-text-fill: #000000;
 }

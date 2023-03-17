@@ -32,6 +32,16 @@ public class MainController implements Initializable {
     	TranslateTransition t = new TranslateTransition(Duration.seconds(1), vBox);
 		t.setToX(5);
 		t.play();
+		t.setOnFinished(e->{
+			try {
+				fxml = FXMLLoader.load(getClass().getClassLoader().getResource("interfaces/SignUp.fxml"));
+				vBox.getChildren().removeAll();
+				vBox.getChildren().setAll(fxml);
+			}catch (Exception e1){
+				e1.printStackTrace();
+			}
+		});
+		
     }
     private Parent fxml;
     @FXML
@@ -41,7 +51,7 @@ public class MainController implements Initializable {
 		t.play();
 		t.setOnFinished(e->{
 			try {
-				fxml = FXMLLoader.load(getClass().getResource("/interfaces/Signin.fxml"));
+				fxml = FXMLLoader.load(getClass().getClassLoader().getResource("interfaces/Signin.fxml"));
 				vBox.getChildren().removeAll();
 				vBox.getChildren().setAll(fxml);
 			}catch (Exception e1){
