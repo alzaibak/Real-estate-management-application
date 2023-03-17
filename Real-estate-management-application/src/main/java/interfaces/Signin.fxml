@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="262.0" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="262.0" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SigninController">
    <children>
-      <Label text="Se connecter" textFill="#c4314ffc">
+      <Label prefHeight="35.0" prefWidth="109.0" text="Se connecter" textFill="#c4314ffc">
          <VBox.margin>
             <Insets left="20.0" />
          </VBox.margin>
@@ -21,7 +20,7 @@
       </Label>
       <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="199.0">
          <children>
-            <TextField floatText="Adresse mail" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="signInMail" floatText="Adresse mail" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
          </children>
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="20.0" />
@@ -29,7 +28,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="219.0" prefHeight="31.0" prefWidth="199.0">
          <children>
-            <TextField floatText="Mot de passe" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+            <TextField fx:id="signInPassword" floatText="Mot de passe" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="15.0" right="15.0" top="20.0" />
                </HBox.margin>
@@ -38,7 +37,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="227.0" prefHeight="31.0" prefWidth="199.0">
          <children>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" opacity="0.74" styleClass="transperant-button" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" text="Mot de passe oublié?" textAlignment="CENTER" textFill="#00000087">
+            <Button fx:id="signInPasswordForgoten" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#passwordRecovery" opacity="0.74" styleClass="transperant-button" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" text="Mot de passe oublié?" textAlignment="CENTER" textFill="#00000087">
                <font>
                   <Font name="System Italic" size="7.0" />
                </font>
@@ -46,15 +45,23 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-radius: 10;" styleClass="pink-buttom" text="Connexion">
+            <Button fx:id="signInButtom" mnemonicParsing="false" onAction="#openHome" style="-fx-background-radius: 10;" styleClass="pink-buttom" text="Connexion" textFill="WHITE">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
             </Button>
          </children>
          <VBox.margin>
             <Insets top="15.0" />
          </VBox.margin>
       </HBox>
+      <VBox fx:id="Vbox" prefHeight="49.0" prefWidth="256.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </VBox>
    </children>
 </VBox>
