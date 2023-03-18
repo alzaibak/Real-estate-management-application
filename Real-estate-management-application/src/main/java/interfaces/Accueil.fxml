@@ -24,7 +24,6 @@
             </Label>
          </children>
       </Pane>
-      <ImageView fx:id="image" fitHeight="301.0" fitWidth="295.0" layoutX="28.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
       <TextField fx:id="rent" layoutX="406.0" layoutY="126.0" prefHeight="25.0" prefWidth="224.0" />
       <Label layoutX="406.0" layoutY="97.0" text="Loyer" textFill="#4fa1ba">
          <font>
@@ -56,5 +55,6 @@
             <Font name="Arial Black" size="14.0" />
          </font>
       </Label>
+      <ImageView fx:id="image" fitHeight="303.0" fitWidth="311.0" layoutX="28.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

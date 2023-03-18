@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.ByteArrayInputStream;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -10,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
@@ -45,24 +47,38 @@ public class AccueilController implements Initializable {
 
     }
     void disponibilityCheck() {
-    	String sql = "select * from appartements where (idUser=Null)";
+    	String sql = "select * from appartements where idUser IS NULL";
     	int i =0;
+    	int loyer;
+    	int charge;
+    	byte byteImg[];
+    	Blob blob;
     	try {
     		statement = cnx.prepareStatement(sql);
     		result = statement.executeQuery();
     		if(result.next()) {
-    			i = result.getInt(i);
+    			i = result.getInt(1);
+        		label.setText(Integer.toString(i));
+        		loyer = result.getInt("loyer");
+        		rent.setText(Integer.toString(loyer));
+        		charge = result.getInt("prix des charges");
+        		charges.setText(Integer.toString(charge));
+        		adresse.setText(result.getString("Adresse"));
+        		region.setText(result.getString("Ville"));
+        		blob = result.getBlob("image");
+        		byteImg = blob.getBytes(1, (int) blob.length());
+        		Image img = new Image(new ByteArrayInputStream(byteImg), image.getFitWidth(),image.getFitHeight(),true,true);
+        		image.setImage(img);
     		}
-    		label.setText(Integer.toString(i));
     	}catch(SQLException e) {
     		e.printStackTrace();
     	}
     }
    
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		cnx = MySqlConnection.DBConnection();
+		disponibilityCheck();
 	}
 
 }
