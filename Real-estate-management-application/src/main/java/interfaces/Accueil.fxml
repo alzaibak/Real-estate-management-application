@@ -50,6 +50,6 @@
             <Font name="Arial Black" size="14.0" />
          </font>
       </Label>
-      <ImageView fx:id="image" fitHeight="303.0" fitWidth="311.0" layoutX="33.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="image" fitHeight="216.0" fitWidth="311.0" layoutX="33.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
