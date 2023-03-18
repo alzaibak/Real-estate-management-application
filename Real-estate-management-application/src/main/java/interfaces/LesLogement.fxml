@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="418.0" prefHeight="418.0" prefWidth="760.0" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="418.0" prefHeight="418.0" prefWidth="687.0" stylesheets="@../com/alzaibak/Real_estate_management_application/App.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="39.0" layoutY="14.0" text="Recherche">
          <font>
