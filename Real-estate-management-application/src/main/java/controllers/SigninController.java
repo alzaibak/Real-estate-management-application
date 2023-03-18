@@ -13,6 +13,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -56,9 +58,11 @@ public class SigninController  implements Initializable{
 	    			home.show();
 	        		System.out.println("You are connected");
 
-	        	}
-	    	}else {
-        		System.out.println("you are not authorized");
+	        	}else {
+	        		System.out.println("you are not authorized");
+	        		Alert alert = new Alert(AlertType.ERROR, "nome de l'utilisateur ou mot de passse incorrect", javafx.scene.control.ButtonType.OK);
+	        		 alert.showAndWait();
+	    	}
         	}
 		} catch (SQLException e) {
 			e.printStackTrace();
