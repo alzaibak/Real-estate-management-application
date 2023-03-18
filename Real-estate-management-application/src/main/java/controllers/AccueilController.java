@@ -44,7 +44,6 @@ public class AccueilController implements Initializable {
     void showPrevious(MouseEvent event) {
 
     }
-    
     void disponibilityCheck() {
     	String sql = "select * from appartements where (idUser=Null)";
     	int i =0;
@@ -59,11 +58,11 @@ public class AccueilController implements Initializable {
     		e.printStackTrace();
     	}
     }
+   
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		cnx = MySqlConnection.DBConnection();
-		disponibilityCheck();
 	}
 
 }
