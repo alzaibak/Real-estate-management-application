@@ -74,11 +74,26 @@ public class LesLocataires implements Initializable{
     @FXML
     private TextField userSolde;
     
-    public ObservableList<Locataires> data = FXCollections.observableArrayList();
-
+    
+    //Searching existing user
     @FXML
     void searchButton(MouseEvent event) {
-
+    	String sql = "select * from users where firstName = '"+firstnameText.getText()+"' && lastName = '"+LastnameText.getText()+"'";
+    	try {
+    		statement = cnx.prepareStatement(sql);
+    		result = statement.executeQuery();
+    		if(result.next()) {
+    			userId.setText(result.getString("idUser"));
+    			firstnameText.setText(result.getString("firstName"));
+    			upToDateText.setText(result.getString("upToDatePayements"));
+    			userSolde.setText(result.getString("userSold"));
+    			phoneNumberText.setText(result.getString("phoneNumber"));
+    			Date date = result.getDate("birthDay");
+    			birthdayText.setText((date).toString());
+    		}
+    	}catch(SQLException e) {
+    		e.printStackTrace();
+    	}
     }
 
     @FXML
@@ -96,6 +111,8 @@ public class LesLocataires implements Initializable{
 
     }
     
+    //fetching all users information
+    public ObservableList<Locataires> data = FXCollections.observableArrayList();
     public void ShowLocataires() {
     	String sql = "select * from users"; 
     	try {
@@ -103,7 +120,6 @@ public class LesLocataires implements Initializable{
     		result = statement.executeQuery();
     		while(result.next()) {
     			data.add(new Locataires (result.getInt("idUser"), result.getString("firstName"), result.getString("lastName"), result.getDate("birthDay"), result.getInt("phoneNumber"), result.getString("upToDatePayements"), result.getInt("userSold")));
-    			System.out.println(data);
     		}
     	}catch(SQLException e) {
     		e.printStackTrace();
