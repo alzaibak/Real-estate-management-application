@@ -16,6 +16,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -84,12 +86,14 @@ public class LesLocataires implements Initializable{
     		result = statement.executeQuery();
     		if(result.next()) {
     			userId.setText(result.getString("idUser"));
-    			firstnameText.setText(result.getString("firstName"));
     			upToDateText.setText(result.getString("upToDatePayements"));
     			userSolde.setText(result.getString("userSold"));
     			phoneNumberText.setText(result.getString("phoneNumber"));
     			Date date = result.getDate("birthDay");
     			birthdayText.setText((date).toString());
+    		}else {
+    			Alert alert = new Alert(AlertType.ERROR, "Aucun locataire de nom: '"+firstnameText.getText()+"' et prénom:'"+LastnameText.getText()+"' est trouvé", javafx.scene.control.ButtonType.OK );
+    			alert.showAndWait();
     		}
     	}catch(SQLException e) {
     		e.printStackTrace();

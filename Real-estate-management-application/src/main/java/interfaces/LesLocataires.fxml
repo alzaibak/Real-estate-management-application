@@ -16,7 +16,7 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="userId" layoutX="132.0" layoutY="33.0" text="Identifiant">
+      <TextField fx:id="userId" editable="false" layoutX="132.0" layoutY="33.0" text="Identifiant">
          <font>
             <Font name="Cambria" size="12.0" />
          </font>
