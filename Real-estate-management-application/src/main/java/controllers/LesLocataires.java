@@ -1,13 +1,127 @@
 package controllers;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
+import java.io.ByteArrayInputStream;
+import java.net.URL;
+import java.sql.Blob;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class LesLocataires extends Application{
+import com.alzaibak.Real_estate_management_application.MySqlConnection;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
+import models.Locataires;
+
+public class LesLocataires implements Initializable{
+	Connection cnx;
+	public PreparedStatement statement;
+	public ResultSet result;
+
+    @FXML
+    private TextField LastnameText;
+
+    @FXML
+    private TableView<Locataires> allUsersTable;
+    
+    @FXML
+    private TableColumn<Locataires, Integer> idColumn;
+    
+    @FXML
+    private TableColumn<Locataires, Date> birthdayColumn;
+
+    @FXML
+    private TextField birthdayText;
+
+    @FXML
+    private TableColumn<Locataires, String> firstnameColumn;
+
+    @FXML
+    private TextField firstnameText;
+
+    @FXML
+    private TableColumn<Locataires, String> lastnameColumn;
+
+    @FXML
+    private TableColumn<Locataires, Integer> phoneNumberColumn;
+
+    @FXML
+    private TextField phoneNumberText;
+
+    @FXML
+    private TableColumn<Locataires, Integer> soldeColumn;
+
+    @FXML
+    private TextField upToDateText;
+
+    @FXML
+    private TableColumn<Locataires, Boolean> upToDdateColumn;
+
+    @FXML
+    private TextField userId;
+
+    @FXML
+    private TextField userSolde;
+    
+    public ObservableList<Locataires> data = FXCollections.observableArrayList();
+
+    @FXML
+    void searchButton(MouseEvent event) {
+
+    }
+
+    @FXML
+    void userAdding(MouseEvent event) {
+
+    }
+
+    @FXML
+    void userDeleting(MouseEvent event) {
+
+    }
+
+    @FXML
+    void userModifing(MouseEvent event) {
+
+    }
+    
+    public void ShowLocataires() {
+    	String sql = "select * from users"; 
+    	try {
+    		statement = cnx.prepareStatement(sql);
+    		result = statement.executeQuery();
+    		while(result.next()) {
+    			data.add(new Locataires (result.getInt("idUser"), result.getString("firstName"), result.getString("lastName"), result.getDate("birthDay"), result.getInt("phoneNumber"), result.getString("upToDatePayements"), result.getInt("userSold")));
+    			System.out.println(data);
+    		}
+    	}catch(SQLException e) {
+    		e.printStackTrace();
+    	}
+    	idColumn.setCellValueFactory(new PropertyValueFactory<Locataires,Integer>("id"));
+    	firstnameColumn.setCellValueFactory(new PropertyValueFactory<Locataires,String>("firstN"));
+    	lastnameColumn.setCellValueFactory(new PropertyValueFactory<Locataires,String>("lastN"));
+    	birthdayColumn.setCellValueFactory(new PropertyValueFactory<Locataires,Date>("BirthD"));
+    	phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<Locataires,Integer>("phoneN"));
+    	upToDdateColumn.setCellValueFactory(new PropertyValueFactory<Locataires,Boolean>("upToDate"));
+    	soldeColumn.setCellValueFactory(new PropertyValueFactory<Locataires,Integer>("sold"));
+    	allUsersTable.setItems(data);
+    }
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
-		// TODO Auto-generated method stub
+	public void initialize(URL location, ResourceBundle resources) {
+		cnx = MySqlConnection.DBConnection();
+		ShowLocataires();
 		
 	}
 

@@ -9,59 +9,70 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="418.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="418.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LesLocataires">
    <children>
       <Label layoutX="39.0" layoutY="32.0" text="Recherche">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="132.0" layoutY="33.0" text="Identifiant">
+      <TextField fx:id="userId" layoutX="132.0" layoutY="33.0" text="Identifiant">
          <font>
             <Font name="Cambria" size="12.0" />
          </font>
       </TextField>
-      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="295.0" layoutY="37.0" />
-      <TextField layoutX="39.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="Nom">
+      <Icon content="VERTICAL_ALIGN_BOTTOM" layoutX="295.0" layoutY="37.0" onMouseClicked="#searchButton" />
+      <TextField fx:id="LastnameText" layoutX="39.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="Nom">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="295.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="prénom">
+      <TextField fx:id="firstnameText" layoutX="267.0" layoutY="74.0" prefHeight="27.0" prefWidth="199.0" text="prénom">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <TableView layoutX="26.0" layoutY="173.0" prefHeight="197.0" prefWidth="635.0">
+      <TableView fx:id="allUsersTable" layoutX="19.0" layoutY="178.0" prefHeight="197.0" prefWidth="651.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Nom" />
-          <TableColumn prefWidth="94.6666488647461" text="Prénom" />
-            <TableColumn prefWidth="128.66664123535156" text="Numéro de téléphone" />
-            <TableColumn prefWidth="119.99993896484375" text="Date de naissance" />
-            <TableColumn prefWidth="102.66659545898438" text="Payement à jour" />
-            <TableColumn prefWidth="112.66670735677087" text="Solde du locataire" />
+            <TableColumn fx:id="idColumn" prefWidth="39.99999809265137" text="Id" />
+          <TableColumn fx:id="lastnameColumn" prefWidth="71.33333969116211" text="Nom" />
+          <TableColumn fx:id="firstnameColumn" prefWidth="97.33331298828125" text="Prénom" />
+            <TableColumn fx:id="phoneNumberColumn" prefWidth="127.33338928222656" text="Numéro de téléphone" />
+            <TableColumn fx:id="birthdayColumn" prefWidth="113.3333740234375" text="Date de naissance" />
+            <TableColumn fx:id="upToDdateColumn" prefWidth="98.00003051757812" text="Payement à jour" />
+            <TableColumn fx:id="soldeColumn" minWidth="4.0" prefWidth="99.0" text="Solde locataire" />
         </columns>
       </TableView>
-      <Button layoutX="181.0" layoutY="376.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Ajouter">
+      <Button layoutX="181.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#userAdding" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Ajouter">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="295.0" layoutY="376.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Modifier">
+      <Button layoutX="295.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#userModifing" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Modifier">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="406.0" layoutY="376.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Supprimer">
+      <Button layoutX="406.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#userDeleting" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: lightblue;" text="Supprimer">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <TextField layoutX="39.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="date de naissance">
+      <TextField fx:id="birthdayText" layoutX="39.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="date de naissance">
          <font>
             <Font size="13.0" />
          </font>
       </TextField>
-      <TextField layoutX="295.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="Numéro de téléphone">
+      <TextField fx:id="phoneNumberText" layoutX="267.0" layoutY="123.0" prefHeight="27.0" prefWidth="199.0" text="Numéro de téléphone">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="upToDateText" layoutX="485.0" layoutY="74.0" prefHeight="29.0" prefWidth="182.0" text="payement à jour">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="userSolde" layoutX="483.0" layoutY="123.0" prefHeight="29.0" prefWidth="182.0" text="solde">
          <font>
             <Font size="13.0" />
          </font>
